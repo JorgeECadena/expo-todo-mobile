@@ -17,3 +17,9 @@ export interface CreateCategoryRes {
     description: string;
     color: string;
 }
+
+export interface EditCategory {
+    name: string;
+    description: string;
+    color: string;
+}
