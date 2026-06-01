@@ -1,15 +1,3 @@
-// import { Text, View } from 'react-native';
-
-// export default function SignUp() {
-//     return (
-//       <View className="flex-1 justify-center items-center">
-//         <Text>
-//           Sign up
-//         </Text>
-//       </View>
-//     );
-//   }
-
 import React, { useState } from 'react';
 import { Text, View, TextInput, TouchableOpacity, ActivityIndicator, ScrollView } from 'react-native';
 import { useSession } from '@/context/ctx';
