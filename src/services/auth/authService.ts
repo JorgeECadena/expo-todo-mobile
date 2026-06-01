@@ -1,7 +1,6 @@
 import api from "@/services/api";
 import { auth } from "@/services/auth/auth";
-import { CreateUserResponse } from "@/types/createUser.js";
-import { CreateUserReq } from "@/types/createUser.js";
+import { CreateUserReq, CreateUserResponse } from "@/types/users/users";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 export const signUp = async (

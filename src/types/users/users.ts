@@ -13,3 +13,8 @@ export interface CreateUserResponse {
     providerUuid: string;
     role: string;
 }
+
+export interface UserProfile {
+    name: string;
+    email: string;
+}

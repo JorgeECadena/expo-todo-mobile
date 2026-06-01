@@ -100,9 +100,11 @@ export default function Profile() {
       <ConfirmationModal
         visible={modalVisible}
         title="Sign Out"
-        message="Are you sure you want to sign out? You will need to log back in to access your tasks."
+        message="Are you sure you want to sign out?"
+        confirmLabel="Sign Out"
+        isDestructive={true} // Turns the button red
         onConfirm={() => {
-          setModalVisible(false);
+          setModalVisible(true);
           signOut();
         }}
         onCancel={() => setModalVisible(false)}
