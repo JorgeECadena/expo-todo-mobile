@@ -46,13 +46,13 @@ export default function BottomNavBar() {
         activeOpacity={0.7}
       >
         <Ionicons 
-          name={isActive('/search') ? "search" : "search-outline"} 
+          name={isActive('/todos/search') ? "search" : "search-outline"} 
           size={24} 
-          color={isActive('/search') ? "#2563EB" : "#9CA3AF"} // Blue if active, Gray if inactive
+          color={isActive('/todos/search') ? "#2563EB" : "#9CA3AF"} // Blue if active, Gray if inactive
         />
         <Text 
           className={`text-xs mt-1 font-medium ${
-            isActive('/search') ? "text-blue-600 font-semibold" : "text-gray-400"
+            isActive('/todos/search') ? "text-blue-600 font-semibold" : "text-gray-400"
           }`}
         >
           Search
