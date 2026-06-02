@@ -41,7 +41,7 @@ export default function BottomNavBar() {
 
       {/* Search Tab Button */}
       <TouchableOpacity 
-        onPress={() => router.replace('/search')} 
+        onPress={() => router.replace('/todos/search')} 
         className="items-center justify-center flex-1"
         activeOpacity={0.7}
       >

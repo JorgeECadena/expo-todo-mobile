@@ -30,3 +30,9 @@ export const deleteTodo = async (id: string): Promise<string> => {
 
     return res.data;
 };
+
+export const searchTodo = async (query: string): Promise<Todo[]> => {
+    const res = await api.get<Todo[]>(`/todos/search/${query}`);
+
+    return res.data;
+};
