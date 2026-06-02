@@ -1,56 +1,40 @@
-# Welcome to your Expo app 👋
+# Sistema de Gestión de Ateliers y Tareas (Todo App)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+¡Bienvenido al repositorio del proyecto! Esta es una aplicación móvil moderna desarrollada para optimizar la organización, seguimiento y gestión de talleres (ateliers) y tareas de manera eficiente.
 
-## Get started
+## 📝 Descripción del Proyecto
 
-1. Install dependencies
+Este proyecto consiste en una aplicación móvil multiplataforma diseñada para la gestión integral de tareas relacionadas con ateliers. La aplicación permite a los usuarios crear, visualizar, editar, buscar y eliminar tareas (ateliers). 
 
+### Características Principales
+
+* **Detalle Avanzado:** Vista detallada de cada taller, incluyendo título, descripción, prioridad (LOW, MEDIUM, HIGH), fecha de vencimiento y estado de completado.
+* **Modo de Edición Dinámico:** Formulario interactivo gestionado con **Formik** y validado con **Yup** que permite modificar toda la información en tiempo real.
+* **Manejo Multifacético de Categorías:** Soporte completo para visualizar y asignar múltiples categorías por atelier, representadas visualmente mediante etiquetas con colores personalizados.
+* **Búsqueda Optimizada (Debounce):** Pantalla de búsqueda dedicada que implementa un retraso (*debounce*) de 500ms al escribir. Esto evita llamadas excesivas al backend, protegiendo el rendimiento del servidor.
+* **Compatibilidad Estricta con Backend:** Formateo localizado de fechas al formato ISO `LocalDateTime` requerido por servidores Java para evitar desajustes de zona horaria o errores de parseo (500 Internal Server Error).
+
+---
+
+## 🚀 Tecnologías Utilizadas
+
+La arquitectura del proyecto está construida sobre las siguientes tecnologías y librerías modernas del ecosistema JavaScript/TypeScript:
+
+* **React Native:** Framework principal para el desarrollo de la interfaz nativa multiplataforma.
+* **Expo:** Plataforma y suite de herramientas para agilizar el desarrollo y la compilación.
+* **Expo Router:** Enrutamiento basado en archivos nativo para una navegación fluida e intuitiva.
+* **TypeScript:** Tipado estático robusto para garantizar la escalabilidad y prevenir errores en tiempo de ejecución.
+* **Formik & Yup:** Gestión robusta de formularios, estados de carga, manejo de errores y esquemas de validación estrictos.
+* **NativeWind (Tailwind CSS):** Sistema de diseño y estilizado mediante clases utilitarias altamente eficientes.
+* **@react-native-community/datetimepicker:** Selector nativo de fechas tanto para iOS como para Android.
+
+---
+
+## 🛠️ Instrucciones de Instalación
+
+Sigue estos pasos para configurar el entorno de desarrollo local:
+
+1. **Clonar el repositorio:**
    ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+   git clone [https://github.com/JorgeECadena/expo-todo-mobile.git](https://github.com/JorgeECadena/expo-todo-mobile.git)
+   cd todo-mobile
