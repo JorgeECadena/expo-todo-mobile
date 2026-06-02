@@ -1,10 +1,3 @@
-// import { Stack } from 'expo-router';
-
-// export default function AppLayout() {
-//   // This renders the navigation stack for all authenticated app routes.
-//   return <Stack screenOptions={{ headerShown: false }} />;
-// }
-
 import { Slot, Redirect } from 'expo-router';
 import { View, ActivityIndicator } from 'react-native';
 import { useSession } from '@/context/ctx';

@@ -1,11 +1,10 @@
 import "@/global.css";
 import { Stack } from 'expo-router';
 
-import { SessionProvider, useSession } from '@/context/ctx';
+import { SessionProvider } from '@/context/ctx';
 import { SplashScreenController } from '@/splash';
 
 export default function Root() {
-  // Set up the auth context and render your layout inside of it.
   return (
     <SessionProvider>
       <SplashScreenController />
@@ -14,23 +13,14 @@ export default function Root() {
   );
 }
 
-// Create a new component that can access the SessionProvider context later.
 function RootNavigator() {
-  const { session } = useSession();
-
+  // We don't need to check the session here because (app)/_layout.tsx 
+  // handles the protection and redirects automatically.
   return (
     <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Protected guard={!!session}>
-        <Stack.Screen name="(app)" />
-      </Stack.Protected>
-
-      <Stack.Protected guard={!session}>
-        <Stack.Screen name="sign-in" />
-      </Stack.Protected>
-
-      <Stack.Protected guard={!session}>
-        <Stack.Screen name="sign-up" />
-      </Stack.Protected>
+      <Stack.Screen name="(app)" />
+      <Stack.Screen name="sign-in" />
+      <Stack.Screen name="sign-up" />
     </Stack>
   );
 }
